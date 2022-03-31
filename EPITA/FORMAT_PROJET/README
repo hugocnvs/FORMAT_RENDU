@@ -1,0 +1,93 @@
+//////////////////////////////////////////////////////
+//						   //
+//	[CAV][TP1] 				   //
+//	Hugo CANAVESE				   //
+//	Bachelor Cyber				   //
+//	hugo.canavese@epita.fr			   //
+//						   //
+/////////////////////////////////////////////////////
+
+
+** Ce dossier contient le rendu du projet de C-AVANCE/PILES **
+
+Les codes suivants sont présents :
+
+==> src/
+	==> stack_array.c
+	==> stack_array.h
+	==> stack_linked_list.c
+	==> stack_linked_list.h
+	==> utilities_stack_ll.c
+	==> utilities_stack_array.c
+
+### UTILISATION DU MAKEFILE :
+
+Avant tout vous venez de décompresser une archive au format tar.bz2
+
+## Veuillez verifier que les éléments :
+
+	==> src/
+	==> check/
+	==> configure
+	==> AUTHORS
+	==> Makefile sont bien présents 
+
+
+****************************************/!\ ATTENTION /!\********************************************
+
+Lors de la génération des librairies dynamiques, lors de l'execution des routines check/
+Une commande est automatiquement generée : export LD_LIBRARY_PATH=.:/usr/lib:/usr/local/lib
+
+Lors des diff entre les fichiers, des mentions d'erreurs interviennent inutilement. Il s'agit d'une erreur à cause d'espaces
+que je ne parvient pas à résoudre. Seul l'erreur de HEAD est correcte
+
+*****************************************************************************************************
+
+Si une erreur survient au moment du lancement des tests, il est probable que la librairie libstack2.so ne soit pas trouvée
+Merci d'ecrire cette commande dans les dossiers src/ et check/
+
+
+# Pour utiliser ce Maikfile vous devez aupparavant executer la commande :
+	./configure
+
+Cette commande execute la création d'un fichier Makefile.rules contenant les variables nécéssaires au Makefile
+
+
+# Si vous souhatez compiler l'ensemble du projet sans pour autant lancer les tests :
+	make all
+
+# Si vous souhaitez compiler l'ensemble du projet et lancer les tests automatiques :
+	make check
+
+#Si vous souhaitez nettoyer le projet (fichiers transitoires et intermédiaires) :
+	make clean
+
+#Si vous souhaitez preparer le dossier pour un format de rendu, en supprimant tout les binaires (état d'origine  du projet) :
+	make dist
+
+#Si vous souhaitez nettoyer l'enseble du projet (clean + suppression des binaires et autre fichiers de compilation)
+	make distclean
+	
+	/!\ 
+	    make distclean ne génère pas de .tar.bz2
+	/!\
+
+
+#Si vous souhaitez ne lancer que l'execution de la création de la lib statique ainsi que la compilation des codes :
+	make static
+	Les codes executables sont présents par la suite dans src/ sous le nom :
+	- utilities_stack_array_stat_prog
+	- utilities_stack_ll_stat_prog
+
+
+#Si vous souhaitez ne lancer que l'execution de la création de la lib dynamique ainsi que la compilation des codes :
+	make shared
+	Les codes executables sont présents par la suite dans src/ sous le nom :
+	- utilities_stack_array_shared_prog
+	- utilities_stack_ll_shared_prog
+
+
+==> Lors de "make check" la sortie des fichiers RESULTATS_STATIC_COMPILATION.txt & RESULTATS_SHARED_COMPILATION est automatique
+    affichée dans le terminal
+    Vous pouvez aussi retrouver les fichiers dans check/
+
