@@ -1,0 +1,21 @@
+//////////////////////////////////////////////////////
+//						   //
+//	[CAV][TP1] 				   //
+//	Hugo CANAVESE				   //
+//	Bachelor Cyber				   //
+//	hugo.canavese@epita.fr			   //
+//						   //
+/////////////////////////////////////////////////////
+
+
+Ce dossier contient le rendu du projet C-AVANCE/PILES
+Il contient les documents suivants :
+
+	==> README	
+	==> configure.sh
+	==> Makefile
+
+Et les dossiers :
+
+	==> check
+	==> src
